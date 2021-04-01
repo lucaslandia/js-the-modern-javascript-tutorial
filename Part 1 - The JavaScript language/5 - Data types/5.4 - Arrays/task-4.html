@@ -1,0 +1,36 @@
+<!-- Sum input numbers
+
+Write the function sumInput() that:
+
+- Asks the user for values using prompt and stores the values in the array.
+- Finishes asking when the user enters a non-numeric value, an empty string, or presses “Cancel”.
+- Calculates and returns the sum of array items.
+
+P.S. A zero 0 is a valid number, please don’t stop the input on zero. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<title>Task 4</title>
+<script>
+    sumImput()
+
+    function sumImput() {
+        const arr = []
+
+        while (true) {
+            const input = prompt('Input a number:', '')
+
+            if (input === null || input.trim() === '' || isNaN(input))
+                break
+
+            arr.push(+input)
+        }
+
+        let sum = 0
+        for (const number of arr)
+            sum += number
+
+        alert(`Sum: ${sum}`)
+    }
+</script>
+</html>
